@@ -83,18 +83,14 @@ pip install flask
 
 #### Run
 bash
-[
   git clone https://github.com/vandhanaunni543-eng/skillHER
   cd skillher
   python app.py
-]
 
 
 Then open:
 bash
-[
   http://127.0.0.1:5000
-]
 
 
 
@@ -105,24 +101,24 @@ bash
 
 #### Screenshots (Add at least 3)
 
-![<img width="1920" height="1020" alt="Screenshot 2026-02-28 155324" src="https://github.com/user-attachments/assets/0a2475e6-b4c8-4907-bf74-9f5a24ddb288" />
-]
+<img width="1920" height="1020" alt="Screenshot 2026-02-28 155324" src="https://github.com/user-attachments/assets/0a2475e6-b4c8-4907-bf74-9f5a24ddb288" />
+
 *Homepage displaying introduction and navigation.*
 
-![<img width="1920" height="1020" alt="Screenshot 2026-02-28 155343" src="https://github.com/user-attachments/assets/8b24b37b-7b86-4259-abad-aedd39fe2b6f" />
-]
+<img width="1920" height="1020" alt="Screenshot 2026-02-28 155343" src="https://github.com/user-attachments/assets/8b24b37b-7b86-4259-abad-aedd39fe2b6f" />
+
 *login page *
 
-![<img width="1920" height="1020" alt="Screenshot 2026-02-28 155426" src="https://github.com/user-attachments/assets/d19a35fb-37f7-4435-b71d-f62ef5611fa2" />
-]
+<img width="1920" height="1020" alt="Screenshot 2026-02-28 155426" src="https://github.com/user-attachments/assets/d19a35fb-37f7-4435-b71d-f62ef5611fa2" />
+
 *User registration form to enter skill details.*
 
 #### Diagrams
 
 **System Architecture:**
 
-![<img width="1536" height="1024" alt="SkillHER app system architecture diagram" src="https://github.com/user-attachments/assets/b07cb169-2958-4aae-bf10-36737259f57e" />
-]
+<img width="1536" height="1024" alt="SkillHER app system architecture diagram" src="https://github.com/user-attachments/assets/b07cb169-2958-4aae-bf10-36737259f57e" />
+
 *Explain your system architecture - The application follows a simple client-server architecture:
 Frontend: HTML templates rendered using Flask
 Backend: Flask application handling routes and logic
@@ -131,8 +127,8 @@ Matching Logic: Backend filtering based on skill offered and skill wanted*
 
 **Application Workflow:**
 
-![<img width="1536" height="1024" alt="workflow" src="https://github.com/user-attachments/assets/abc3d3f6-c407-45e0-9c22-65c23abef8b8" />
-]
+<img width="1536" height="1024" alt="workflow" src="https://github.com/user-attachments/assets/abc3d3f6-c407-45e0-9c22-65c23abef8b8" />
+
 *User registers with skill details
 Data is stored in SQLite database
 System checks for reciprocal skill matches
@@ -165,29 +161,93 @@ HTML Page
     Password
     Skill Offerred
     Skill Wanted 
+- **Response:**
 
-- *Response:*
-/dashboard
+redirect: /dashboard
 
 
-*POST /login*
-- *Description:* Logs in existing user.
-- *Request Body:
+**POST /login**
+- **Description:** Logs in existing user.
+- **Request Body:*
     Name
     Password
-
 - **Response:**
-/dashboard
+
+redirect: /dashboard
 
 
-**POST /dashboard**
+**POST /logout**
+- **Description:** Logs out current user.
+- **Response:**
+
+redirect: /
+
+
+**POST /edit_profile**
+- **Description:** Updates user skills.
+- **Request Body:*
+    Skill Offered
+    Skill Wanted
+- **Response:**
+
+redirect: updated '/dashboard'
+
+
+**GET /dashboard**
 - **Description:** Returns dashboard with:
-Logged-in user details
-Skill matches
-Swap requests
-
+            Logged-in user details
+            Skill matches
+            Swap requests
 - **Response:**
-user,match,swap request
+
+redirect: /dashboard
+
+
+**GET /send_request/<username>**
+- **Description:** Sends swap request to another user.
+- **Request Body:*
+    username
+- **Response:**
+
+redirect: /dashboard
+
+
+**GET /accept_request/<req_id>**
+- **Description:** Accepts swap request.
+- **Request Body:*
+    req_id
+- **Response:**
+
+redirect: /dashboard
+
+
+**GET /reject_request/<req_id>**
+- **Description:** Rejects swap request.
+- **Request Body:*
+    req_id
+- **Response:**
+
+redirect: /dashboard
+
+
+**GET /chat/<username>**
+- **Description:** Opens chat with another user.
+- **Request Body:*
+    username
+- **Response:**
+
+Returns chat interface with conversation.
+
+
+**POST /chat/<username>**
+- **Description:** Sends a message to another user.
+- **Request Body:*
+    message
+- **Response:**
+
+Reloads chat page
+
+
 
 ---
 
@@ -212,27 +272,26 @@ https://drive.google.com/file/d/1NQpg05jesuaDOXqhZp_lCYDUDUQwcbrW/view?usp=drive
 
 If you used AI tools during development, document them here for transparency:
 
-**Tool Used:** ChatGPT
+**Tool Used:** ChatGPT and Gemini
 
 **Purpose:** 
-- Example: Generated UI Components and Backend Help
-- Example: "Debugging assistance for async functions"
-- Example: "Code review and optimization suggestions"
+- CHATGPT: Generated UI Components and Backend Help
+- Gemini: Help with Initial Setup and Basic Installation
 
-**Percentage of AI-generated code:** 30%
+**Percentage of AI-generated code:** 20%
 
 **Human Contributions:**
-- Architecture design and planning
-- Custom business logic implementation
-- Integration and testing
-- UI/UX design decisions
+- Planning and System Architecture
+- Logic Building
+- UI/UX Design
+- Backend and Database
 
 
 ---
 
 ## Team Contributions
 
-- Vandhana K U: Backend and DB
+- Vandhana K U: Backend and Database Handling
 - sahala k s: Frontend
 
 ---
@@ -249,3 +308,4 @@ This project is licensed under the [LICENSE_NAME] License - see the [LICENSE](LI
 ---
 
 Made with ❤️ at TinkerHub
+
