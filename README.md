@@ -1,15 +1,15 @@
-<p align="center">
+10<p align="center">
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# [Project Name] 🎯
+# [skillHER] 🎯
 
 ## Basic Details
 
-### Team Name: [Name]
+### Team Name: [togetHER]
 
 ### Team Members
-- Member 1: [Name] - [College]
+- Member 1: [Vandhana K U] - [College]
 - Member 2: [Name] - [College]
 
 ### Hosted Project Link
