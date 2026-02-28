@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register - SkillHer</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="landing">
+
+    <div class="container">
+        <h2>Register</h2>
+
+        <form method="POST" action="/register">
+            <input type="text" name="name" placeholder="Full Name" required><br><br>
+            <input type="email" name="email" placeholder="Email" required><br><br>
+            <input type="password" name="password" placeholder="Password" required><br><br>
+
+            <input type="text" name="skill_offered" placeholder="Skill You Offer" required><br><br>
+            <input type="text" name="skill_wanted" placeholder="Skill You Want" required><br><br>
+
+            <select name="level" required>
+                <option value="">Select Skill Level</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Pro">Pro</option>
+            </select><br><br>
+
+            <button type="submit" class="btn">Register</button>
+        </form>
+
+        <p style="margin-top:15px;">
+            Already have an account?
+            <a href="/login" style="color:rgb(248, 128, 128); font-weight:bold;">Login</a>
+        </p>
+    </div>
+
+</body>
+</html>

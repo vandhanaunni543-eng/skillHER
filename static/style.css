@@ -1,0 +1,167 @@
+/* ================= BODY ================= */
+
+.landing {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+}
+
+/* ================= MAIN CONTAINER ================= */
+
+.container {
+    text-align: center;
+    background: #ffe6f0;   /* Light pink tile */
+    padding: 50px 40px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(232, 67, 147, 0.2);
+    width: 90%;
+    max-width: 600px;
+    transition: 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+/* ================= TEXT STYLING ================= */
+
+h1 {
+    margin: 0;
+    font-size: 48px;
+    color: #c2185b;
+}
+
+h3 {
+    margin-top: 10px;
+    font-weight: 500;
+    color: #e84393;
+}
+
+p {
+    margin-top: 25px;
+    color: #444;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* ================= BUTTON ================= */
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 30px;
+    background: linear-gradient(45deg, #ff6b81, #fae6f0);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.07);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 600px) {
+    .container {
+        padding: 35px 25px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+}
+
+
+/* ================= FORM STYLING ================= */
+
+form {
+    margin-top: 25px;
+}
+
+input {
+    width: 85%;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: #ffeaf4;
+    box-shadow: inset 0 3px 8px rgba(232, 67, 147, 0.1);
+    transition: 0.3s ease;
+}
+
+input:focus {
+    box-shadow: 0 0 8px rgba(232, 67, 147, 0.4);
+}
+
+/* ================= LOGIN HEADING ================= */
+
+h2 {
+    color: #c2185b;
+    margin-bottom: 10px;
+}
+
+/* ================= REGISTER LINK ================= */
+
+.container p {
+    color: #444;
+}
+
+.container a {
+    color: #e84393;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
+
+/* ================= MODERN SELECT ================= */
+
+select {
+    width: 85%;
+    padding: 12px 15px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background: #ffeaf4;
+    box-shadow: inset 0 3px 8px rgba(232, 67, 147, 0.1);
+    appearance: none;          /* remove default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+/* Focus Glow */
+select:focus {
+    box-shadow: 0 0 8px rgba(232, 67, 147, 0.4);
+}
+
+/* Custom Arrow */
+.select-wrapper {
+    position: relative;
+    width: 85%;
+    margin: auto;
+}
+
+.select-wrapper::after {
+    content: "▼";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #e84393;
+    pointer-events: none;
+}

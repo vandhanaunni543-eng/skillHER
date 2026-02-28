@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat - SkillHer</title>
+    <link rel="stylesheet" href="/static/chat.css">
+</head>
+<body class="chat-body">
+
+<div class="chat-container">
+
+    <div class="chat-header">
+        <a href="/dashboard" class="back-btn">⬅ Back</a>
+        <h2>Chat with {{ username }} 💬</h2>
+    </div>
+
+    <div id="chat-box" class="chat-box"></div>
+
+    <form method="POST" class="chat-form">
+        <input type="text" name="message" placeholder="Type your message..." required>
+        <button type="submit">Send</button>
+    </form>
+
+</div>
+
+<script>
+function loadMessages() {
+    fetch("/get_messages/{{ username }}")
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("chat-box").innerHTML = data;
+        document.getElementById("chat-box").scrollTop = 
+            document.getElementById("chat-box").scrollHeight;
+    });
+}
+
+setInterval(loadMessages, 2000);
+loadMessages();
+</script>
+
+</body>
+</html>

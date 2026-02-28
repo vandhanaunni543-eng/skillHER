@@ -1,0 +1,203 @@
+/* ================= BODY ================= */
+
+.dashboard-body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    min-height: 100vh;
+}
+
+/* ================= CONTAINER ================= */
+
+.dashboard-container {
+    width: 95%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+/* ================= TOP BAR ================= */
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffd6e8;  /* Light Pink */
+    padding: 20px 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(232, 67, 147, 0.15);
+    margin-bottom: 30px;
+}
+
+.top-bar h1 {
+    margin: 0;
+    color: #e84393;
+}
+
+.logout-btn {
+    text-decoration: none;
+    padding: 8px 18px;
+    background: #ff6b81;
+    color: white;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.logout-btn:hover {
+    background: #ff4757;
+    transform: scale(1.05);
+}
+
+/* ================= CARD ================= */
+
+.card {
+    background: #ffe6f0;   /* Light Pink */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(232, 67, 147, 0.15);
+    margin-bottom: 30px;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* ================= PROFILE SECTION ================= */
+
+.profile-card h2 {
+    color: #e84393;
+}
+
+.skills-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.skills-section div {
+    flex: 1;
+    background: #fff0f5;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.skills-section h3 {
+    margin-top: 0;
+    color: #ff6b81;
+}
+
+/* ================= BUTTONS ================= */
+
+.primary-btn {
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #ff6b81, #e84393);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.primary-btn:hover {
+    transform: scale(1.05);
+}
+
+/* ================= MATCH GRID ================= */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.mini-card {
+    background: #ffeaf4;   /* Softer pink */
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(232, 67, 147, 0.1);
+}
+
+/* ================= REQUEST SECTION ================= */
+
+.request-card {
+    background: #fff0f5;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.button-group {
+    margin-top: 10px;
+}
+
+/* ================= ACCEPT / REJECT ================= */
+
+.accept-btn {
+    padding: 8px 15px;
+    background: #2ed573;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.accept-btn:hover {
+    background: #20bf6b;
+}
+
+.reject-btn {
+    padding: 8px 15px;
+    background: #ff4757;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.reject-btn:hover {
+    background: #e84118;
+}
+
+/* ================= STATUS BADGE ================= */
+
+.status {
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.status.Pending {
+    background: #ffeaa7;
+    color: #d35400;
+}
+
+.status.Accepted {
+    background: #d4f8e8;
+    color: #27ae60;
+}
+
+.status.Rejected {
+    background: #ffd6d6;
+    color: #c0392b;
+}
+
+/* ================= EMPTY MESSAGE ================= */
+
+.empty-msg {
+    color: #888;
+    font-style: italic;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+    .skills-section {
+        flex-direction: column;
+    }
+}

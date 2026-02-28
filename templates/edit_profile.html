@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Profile - SkillHer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            padding: 40px;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            color: #333;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        label {
+            font-weight: 600;
+            color: #fff;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: none;
+            margin-top: 8px;
+            margin-bottom: 20px;
+            resize: none;
+            font-size: 14px;
+            outline: none;
+        }
+
+        textarea:focus {
+            box-shadow: 0 0 8px rgba(255,255,255,0.8);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: #ff4e50;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background: #fc913a;
+            transform: scale(1.03);
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+    <h2>✨ Edit Your Skills</h2>
+
+    <form method="POST">
+
+        <label>Skills You Offer</label>
+        <textarea name="skill_offered" rows="4" placeholder="Example: Web Design, Python, Public Speaking...">{{ user.skill_offered }}</textarea>
+
+        <label>Skills You Want</label>
+        <textarea name="skill_wanted" rows="4" placeholder="Example: Graphic Design, AI Basics, Marketing...">{{ user.skill_wanted }}</textarea>
+
+        <button type="submit">🚀 Update Profile</button>
+    </form>
+
+    <a href="/dashboard" class="back-link">⬅ Back to Dashboard</a>
+</div>
+
+</body>
+</html>
